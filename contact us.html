@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   
+  <div class="container">
+    
+    <h1>Connect With Us</h1>
+    <p>We would love to respond to your queries and help you succeed.</br>Feel free to get in touch with us. </p>
+    <div class="contact-box">
+        <div class="contact-left">
+            <h3>Sent your request</h3>
+            <form>
+              <div class="Input-row">
+                <div class="Input-group">
+                    <label>Name</label>
+                    <input type="text" id="name" name="name" value=" " required>
+
+                </div>
+                <div class="Input-group">
+                    <label>Phone no</label>
+                    <input type="text" placeholder="+1 412 520 3231"value=" " required>
+                    </div>
+
+            </div>
+            <div class="Input-row">
+                <div class="Input-group">
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" value=" " required> 
+                    </div>
+                    <div class="Input-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="product demo" value=" " required>
+                    </div>
+                    </div>
+                    <label>Message</label>
+                    <textarea id="message" name="message" rows=" " required></textarea>
+                   
+             
+     
+                    <button type="submit">SEND</button> 
+                <button type="reset">RESET</button>
+            </form>
+        </div>
+      
+        <div class="contact-right">
+            <h3>Reach Us</h3>
+            <table>
+                <tr>
+                    <td><i class="fa fa-envelope" aria-hidden="true"></i>Email</td>
+                    <td><a href="#">rkspokenzone1234@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-phone" aria-hidden="true"></i>Phone</td>
+                    <td><a href="#">09334047237</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-map-marker" aria-hidden="true"></i>Address</td>
+                    <td>gopalpur,sampatchak</br>
+                        near VMART Mall,patna-800007
+                    </td>
+                </tr>
+            </table>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100036890464972&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com/pihu_bete?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com/@---7237?si=lXEvwQauYLI94QyZ"><i class="fa fa-youtube"></i></a></li>
+                
+            </ul>
+                   </div>
+                   <div class="contact-left">
+                    <div id="map"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.039434487295!2d85.1732082749275!3d25.537063317851818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2a727707b571d%3A0xfef3a526574802cb!2sR.%20K.%20SPOKEN%20ZONE!5e0!3m2!1sen!2sin!4v1701659812730!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" float="right"></iframe>
+                   </div>   
+        </div>
+        
+  </div> 
+  <script>
+   function submitForm() {
+      var name = document.getElementById('name').value;
+      var phoneno = document.getElementById('phone no').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+
+      // You can add more validation here if needed
+
+      // Construct the mailto URL
+      var mailtoLink = 'mailto:support@example.com?subject=Contact%20Us&body=' + encodeURIComponent('Name: ' + name + '\nphone no:'+phoneno+'\nEmail: ' + email + '\nsubject:'+subject+'\n\n' + message);
+
+      // Open the default email client with the mailto link
+      window.location.href = mailtoLink;
+    }
+    function initMap() {
+      var myLatLng = { lat: 37.7749, lng: -122.4194 }; // Replace with your location coordinates
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 14
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'your location'
+      });
+    }
+  
+  </script>
+   
+
+   <script async defer
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.039434487295!2d85.1732082749275!3d25.537063317851818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2a727707b571d%3A0xfef3a526574802cb!2sR.%20K.%20SPOKEN%20ZONE!5e0!3m2!1sen!2sin!4v1701659812730!5m2!1sen!2sin">
+   </script>
+ 
+</body>
+</html>
