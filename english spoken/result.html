@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1> Results</h1>
+    </header>
+    <div class="container">
+        <ul id="results">
+          <li><h2>Intermediate english</h2> </li> 
+          <p>Best Result scrore in Intermediate</p>
+        
+        <iframe="#"> <img src="images\result2.jpg"  width="30%" height="50%">
+    </iframe>
+        <iframe="#"> <img src="images\result.png"  width="30%" height="50%">
+        </iframe> 
+        <li><h2>Spoken English</h2> </li>
+    <p>All Students speak English frequently</p>
+</ul>
+</div> 
+    <script>
+       
+
+        // Display results on the page
+        const resultsContainer = document.getElementById('results');
+        coachingResults.forEach(result => {
+            const listItem = document.createElement('li');
+            listItem.className = 'result-item';
+            listItem.textContent = `${result.name}: ${result.score}`;
+            resultsContainer.appendChild(listItem);
+        });
+    </script> 
+</body>
+</html>
