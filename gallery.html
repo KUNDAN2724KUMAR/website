@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>gallery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+    
+    <!---------gallery---------->
+    
+        <div class="width-100 margin-top-50">
+            <div class="container">
+                <h2 class="gallery-head-style"> Gallery</h2>
+                 <iframe=""> <img src="images\coaching pic7.jpg"  width="20%" height="15%" >
+                <iframe=""> <img src="images\coaching pic2.jpg" width="20%" height="15%" >
+               <iframe=""> <img src="images\coaching pic9.jpg"  width="20%" height="15%">
+               <iframe=""> <img src="images\coaching pic8.jpg"  width="20%" height="15%">
+               <iframe=""> <img src="images\coaching pic3.jpg"  width="20%" height="15%">   
+                            <iframe=""> <img src= "images\coaching pic.jpg" width="20%" height="15%" >
+                                <iframe=""> <img src= "images\coaching pic6.jpg" width="20%" height="15%" >
+                                   <iframe=""> <img src="images\coaching pic5.jpg"width="20%" height="50%">
+                                   <iframe=""> <img src="images\coaching pic4.jpg" width="20%" height="50%">
+                                  <iframe=""> <img src="images\coaching pic1.jpg"  width="20%" height="50%">
+                                    </iframe>
+            </iframe>
+                            </iframe>
+                        </iframe>
+        </iframe>
+                </iframe>
+            </iframe>
+        </iframe>
+    </iframe>
+</iframe>
+<label for="uploadInput" id="uploadLabel">Upload Photo</label>
+<input type="file" id="uploadInput" accept="image/*">
+                    </div>                      
+                </div>
+         
+                
+                <script>
+                    const gallery = document.getElementById('gallery');
+                    const uploadInput = document.getElementById('uploadInput');
+                
+                    uploadInput.addEventListener('change', handleFileSelect);
+                
+                    function handleFileSelect(event) {
+                      const files = event.target.files;
+                
+                      for (const file of files) {
+                        if (file.type.startsWith('image/')) {
+                          const reader = new FileReader();
+                
+                          reader.onload = function (e) {
+                            const imageContainer = document.createElement('div');
+                            imageContainer.classList.add('image-container');
+                
+                            const img = document.createElement('img');
+                            img.src = e.target.result;
+                
+                            imageContainer.appendChild(img);
+                            gallery.appendChild(imageContainer);
+                          };
+                
+                          reader.readAsDataURL(file);
+                        }
+                      }
+                
+                      // Clear the input value to allow uploading the same file multiple times
+                      uploadInput.value = null;
+                    }
+                  </script>
+               </body>
+    </html>                    
